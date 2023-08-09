@@ -62,7 +62,7 @@ function App() {
 
   return (
     <>
-    <main className={`min-h-screen bg-[url(${bg1})] text-white flex justify-center items-center pl-3 pr-3`}>
+    <main className={weatherInfo && `min-h-screen bg-[url(${bg1})] text-white flex justify-center items-center pl-3 pr-3`}>
       <Weather weatherInfo={weatherInfo}/>
     </main>
     </>
