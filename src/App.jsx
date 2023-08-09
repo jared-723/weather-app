@@ -41,14 +41,20 @@ function App() {
 
   const bg1 = handleBgChange(weatherInfo?.weather[0].icon , bgChange)
 
+  // const handleSearchCountry = (e) => {
+  //   e.preventDefault();
+  //   const countrySearch = e.target.countryForm.value;
+  //   console.log(countrySearch)
+  // }
+
   const success = (pos) =>{
     const lat = pos.coords.latitude;
     const lon = pos.coords.longitude;
 
     const API_KEY = "e6479d3ee8d41c6d00dc508e2ba4da2c"
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+    const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`
 
-  axios.get(url)
+  axios.get(URL)
   .then(({data}) =>setWeatherInfo(data))
   .catch((err) => console.log(err))
 
@@ -62,7 +68,13 @@ function App() {
 
   return (
     <>
-    <main className={weatherInfo && `min-h-screen ${bg1} text-white flex justify-center items-center pl-3 pr-3`}>
+    <main className={weatherInfo && `min-h-screen ${bg1} bg-cover bg-center text-white flex justify-center items-center pl-3 pr-3 `}>
+
+      {/* <form onSubmit={handleSearchCountry} className='mt-[3rem] flex flex-col gap-2 items-center'>
+        <input type="text" id ="countryForm" placeholder='Write a country'/>
+        <button className='bg-white/70 p-2 rounded-xl'>Search</button>
+      </form> */}
+
       <Weather weatherInfo={weatherInfo}/>
     </main>
     </>

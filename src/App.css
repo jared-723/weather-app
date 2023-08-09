@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
 *{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-family: 'Bungee', cursive;
+    font-weight: lighter;
     color:black;
 }
