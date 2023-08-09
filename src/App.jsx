@@ -9,24 +9,24 @@ function App() {
 
   const bgChange = 
     {
-      "01d": '/img/bg1.jfif',
-      "02d": '/img/bg2.jfif',
-      "03d": '/img/bg3.jfif',
-      "04d": '/img/bg4.jfif',
-      "09d": '/img/bg6.jfif',
-      "10d": '/img/bg6.jfif',
-      "11d": '/img/bg9.jfif',
-      "13d": '/img/bg7.jfif',
-      "50d": '/img/bg4.jfif',
-      "01n": '/img/bg1.jfif',
-      "02n": '/img/bg2.jfif',
-      "03n": '/img/bg3.jfif',
-      "04n": '/img/bg4.jfif',
-      "09n": '/img/bg6.jfif',
-      "10n": '/img/bg6.jfif',
-      "11n": '/img/bg9.jfif',
-      "13n": '/img/bg7.jfif',
-      "50n": '/img/bg4.jfif'
+      "01d": 'bg-[url(/img/bg1.jfif)]',
+      "02d": 'bg-[url(/img/bg2.jfif)]',
+      "03d": 'bg-[url(/img/bg3.jfif)]',
+      "04d": 'bg-[url(/img/bg4.jfif)]',
+      "09d": 'bg-[url(/img/bg6.jfif)]',
+      "10d": 'bg-[url(/img/bg6.jfif)]',
+      "11d": 'bg-[url(/img/bg9.jfif)]',
+      "13d": 'bg-[url(/img/bg7.jfif)]',
+      "50d": 'bg-[url(/img/bg4.jfif)]',
+      "01n": 'bg-[url(/img/bg1.jfif)]',
+      "02n": 'bg-[url(/img/bg2.jfif)]',
+      "03n": 'bg-[url(/img/bg3.jfif)]',
+      "04n": 'bg-[url(/img/bg4.jfif)]',
+      "09n": 'bg-[url(/img/bg6.jfif)]',
+      "10n": 'bg-[url(/img/bg6.jfif)]',
+      "11n": 'bg-[url(/img/bg9.jfif)]',
+      "13n": 'bg-[url(/img/bg7.jfif)]',
+      "50n": 'bg-[url(/img/bg4.jfif)]'
     }
 
   const handleBgChange = (bg, obj) => {
@@ -62,7 +62,7 @@ function App() {
 
   return (
     <>
-    <main className={weatherInfo && `min-h-screen bg-[url(${bg1})] text-white flex justify-center items-center pl-3 pr-3`}>
+    <main className={weatherInfo && `min-h-screen ${bg1} text-white flex justify-center items-center pl-3 pr-3`}>
       <Weather weatherInfo={weatherInfo}/>
     </main>
     </>
